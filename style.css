@@ -1,0 +1,20 @@
+*, body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  border: 1px solid black;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.grid-item {
+  box-sizing: border-box;
+  height: 31.25px;
+  width: 31.25px;
+  border: 1px solid red;
+}
