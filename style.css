@@ -14,5 +14,8 @@
 
 .grid-item {
   box-sizing: border-box;
-  border: 1px solid red;
+}
+
+.grid-item:hover {
+  background-color: red;
 }
