@@ -14,7 +14,5 @@
 
 .grid-item {
   box-sizing: border-box;
-  height: 31.25px;
-  width: 31.25px;
   border: 1px solid red;
 }
