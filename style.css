@@ -16,6 +16,6 @@
   box-sizing: border-box;
 }
 
-.grid-item:hover {
-  background-color: red;
+.active-item {
+  background-color: black;
 }

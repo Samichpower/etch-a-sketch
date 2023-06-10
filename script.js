@@ -15,7 +15,7 @@ for (let i = 0; i < 256; i++) {
 btnGridSize.addEventListener('click', () => {
   gridContainer.innerHTML = '';
   gridSize = +prompt("How big do you want this?");
-  if (gridSize > 50) gridSize = 50;
+  if (gridSize > 100) gridSize = 100;
   gridVolume = gridSize * gridSize;
 
   for (let i = 0; i < gridVolume; i++) {
@@ -25,4 +25,12 @@ btnGridSize.addEventListener('click', () => {
     newSquare.style.height = newSquare.style.width;
     gridContainer.appendChild(newSquare);
   }
+
+  const gridItem = document.querySelectorAll('.grid-item');
+
+  gridItem.forEach((item) => {
+    item.addEventListener('mouseover', () => {
+      item.classList.add('active-item');
+    })
+  })
 })
