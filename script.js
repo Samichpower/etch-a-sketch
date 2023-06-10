@@ -12,6 +12,14 @@ for (let i = 0; i < 256; i++) {
   gridContainer.appendChild(newSquare);
 }
 
+const gridItem = document.querySelectorAll('.grid-item');
+
+gridItem.forEach((item) => {
+  item.addEventListener('mouseover', () => {
+    item.classList.add('active-item');
+  })
+})
+
 btnGridSize.addEventListener('click', () => {
   gridContainer.innerHTML = '';
   gridSize = +prompt("How big do you want this?");
