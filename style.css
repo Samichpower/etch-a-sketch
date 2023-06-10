@@ -19,6 +19,22 @@
   align-content: flex-start;
 }
 
+.main-cleared {
+  animation: anim .3s;
+}
+
+@keyframes anim {
+  25%{
+    transform: translateX(6px);
+  }
+  50%{
+    transform: translateX(-6px);
+  }
+  75%{
+    transform: translateX(6px);
+  }
+}
+
 .grid-item {
   box-sizing: border-box;
 }

@@ -51,4 +51,8 @@ clearBtn.addEventListener('click', () => {
   gridItem.forEach((item) => {
     item.classList.remove('active-item');
   })
+  gridContainer.classList.add('main-cleared');
+  setTimeout(() => {
+    gridContainer.classList.remove('main-cleared');
+  }, 300);
 })
