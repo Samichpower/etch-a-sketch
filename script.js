@@ -1,5 +1,6 @@
-const gridContainer = document.querySelector('.grid-container');
+const gridContainer = document.querySelector('.main-etchasketch');
 const btnGridSize = document.querySelector('.grid-size');
+const clearBtn = document.querySelector('.clear');
 
 let gridSize;
 let gridVolume;
@@ -13,7 +14,6 @@ for (let i = 0; i < 256; i++) {
 }
 
 const gridItem = document.querySelectorAll('.grid-item');
-
 gridItem.forEach((item) => {
   item.addEventListener('mouseover', () => {
     item.classList.add('active-item');
@@ -35,10 +35,20 @@ btnGridSize.addEventListener('click', () => {
   }
 
   const gridItem = document.querySelectorAll('.grid-item');
-
   gridItem.forEach((item) => {
     item.addEventListener('mouseover', () => {
       item.classList.add('active-item');
     })
+  })
+  clearBtn.addEventListener('click', () => {
+    gridItem.forEach((item) => {
+      item.classList.remove('active-item');
+    })
+  })
+})
+
+clearBtn.addEventListener('click', () => {
+  gridItem.forEach((item) => {
+    item.classList.remove('active-item');
   })
 })
