@@ -1,11 +1,13 @@
 const gridContainer = document.querySelector('.main-etchasketch');
 const btnGridSize = document.querySelector('.grid-size');
 const clearBtn = document.querySelector('.clear');
+const currentSize = document.querySelector('.current-size');
 
 let gridSize;
 let gridVolume;
 
 for (let i = 0; i < 256; i++) {
+  currentSize.textContent = '16x16';
   const newSquare = document.createElement('div');
   newSquare.className = 'grid-item';
   newSquare.style.width = `31.25px`;
@@ -25,6 +27,7 @@ btnGridSize.addEventListener('click', () => {
   gridSize = +prompt("How big do you want this?");
   if (gridSize > 100) gridSize = 100;
   gridVolume = gridSize * gridSize;
+  currentSize.textContent = `${gridSize}x${gridSize}`;
 
   for (let i = 0; i < gridVolume; i++) {
     const newSquare = document.createElement('div');
