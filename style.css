@@ -25,13 +25,13 @@
 
 @keyframes anim {
   25%{
-    transform: translateX(6px);
+    transform: translateX(10px);
   }
   50%{
-    transform: translateX(-6px);
+    transform: translateX(-10px);
   }
   75%{
-    transform: translateX(6px);
+    transform: translateX(10px);
   }
 }
 
